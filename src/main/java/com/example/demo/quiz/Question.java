@@ -1,42 +1,15 @@
 package com.example.demo.quiz;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class Question {
-    private String text;
-    private List<Answer> answers;
+public interface Question {
+    String getText();
 
-    public Question(String text) {
-        this.text = text;
-        this.answers = new ArrayList<>();
-    }
+    void setText(String text);
 
-    public String getText() {
-        return text;
-    }
+    List<Answer> getAnswers();
 
-    public void setText(String text) {
-        this.text = text;
-    }
+    void setAnswers(List<Answer> answers);
 
-    public List<Answer> getAnswers() {
-        return answers;
-    }
-
-    public void setAnswers(List<Answer> answers) {
-        this.answers = answers;
-    }
-
-    public void addAnswer(Answer answer) {
-        this.answers.add(answer);
-    }
-
-    @Override
-    public String toString() {
-        return "Question{" +
-                "text='" + text + '\'' +
-                ", answers=" + answers +
-                '}';
-    }
+    void addAnswer(Answer answer);
 }

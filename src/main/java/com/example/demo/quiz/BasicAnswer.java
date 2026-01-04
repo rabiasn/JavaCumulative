@@ -4,6 +4,9 @@ public class BasicAnswer<T> implements Answer<T> {
     private T content;
     private boolean isCorrect;
 
+    public BasicAnswer() {
+    }
+
     public BasicAnswer(T content, boolean isCorrect) {
         this.content = content;
         this.isCorrect = isCorrect;

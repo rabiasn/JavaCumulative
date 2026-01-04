@@ -7,6 +7,10 @@ public class BasicQuestion<T> implements Question<T> {
     private String text;
     private List<Answer<T>> answers;
 
+    public BasicQuestion() {
+        this.answers = new ArrayList<>();
+    }
+
     public BasicQuestion(String text) {
         this.text = text;
         this.answers = new ArrayList<>();

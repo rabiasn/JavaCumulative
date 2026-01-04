@@ -7,6 +7,10 @@ public class BasicQuiz implements Quiz {
     private String title;
     private List<Question<?>> questions;
 
+    public BasicQuiz() {
+        this.questions = new ArrayList<>();
+    }
+
     public BasicQuiz(String title) {
         this.title = title;
         this.questions = new ArrayList<>();

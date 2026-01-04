@@ -7,7 +7,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JavaCumulativeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JavaCumulativeApplication.class, args);
+		// Set headless to false to ensure GUI can be displayed even if standard
+		// environment tries to hide it
+		System.setProperty("java.awt.headless", "false");
+
+		// SpringApplication.run(JavaCumulativeApplication.class, args);
+
+		// Launch Swing GUI
+		javax.swing.SwingUtilities.invokeLater(() -> {
+			com.example.demo.gui.QuizFrame frame = new com.example.demo.gui.QuizFrame();
+			frame.setVisible(true);
+		});
 	}
 
 }

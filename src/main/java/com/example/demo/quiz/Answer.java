@@ -1,9 +1,9 @@
 package com.example.demo.quiz;
 
-public interface Answer {
-    String getText();
+public interface Answer<T> {
+    T getContent();
 
-    void setText(String text);
+    void setContent(T content);
 
     boolean isCorrect();
 

@@ -1,22 +1,22 @@
 package com.example.demo.quiz;
 
-public class BasicAnswer implements Answer {
-    private String text;
+public class BasicAnswer<T> implements Answer<T> {
+    private T content;
     private boolean isCorrect;
 
-    public BasicAnswer(String text, boolean isCorrect) {
-        this.text = text;
+    public BasicAnswer(T content, boolean isCorrect) {
+        this.content = content;
         this.isCorrect = isCorrect;
     }
 
     @Override
-    public String getText() {
-        return text;
+    public T getContent() {
+        return content;
     }
 
     @Override
-    public void setText(String text) {
-        this.text = text;
+    public void setContent(T content) {
+        this.content = content;
     }
 
     @Override
@@ -32,7 +32,7 @@ public class BasicAnswer implements Answer {
     @Override
     public String toString() {
         return "BasicAnswer{" +
-                "text='" + text + '\'' +
+                "content=" + content +
                 ", isCorrect=" + isCorrect +
                 '}';
     }
